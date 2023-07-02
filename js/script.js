@@ -1,17 +1,17 @@
 var charlist=document.getElementsByClassName("character-list");
 
 var characters = [
-    {Name:"Jodie Hartanto",
+    {Name:"Jodie",
     id:"001",
     Status: "Master",
-    Ability:"Persuasion",
+    Ability:"Master of Persuasion and Manipulation",
     description:"Jodie is a...",
     imgSrc:"image/jodie.jpeg"
     },{
-    Name:"Robert Liono",
+    Name:"Robert",
     id:"002",
     Status: "Master",
-    Ability:"A+ Guarantee",
+    Ability:"Master of Knowledge and Wisdom",
     description:"Robert is a...",
     imgSrc:"image/robert.jpeg"
     }
@@ -27,7 +27,7 @@ characters.forEach(character => {
     characterButton.description=character.description;
     characterButton.innerHTML=`<img class="characterimage" src="${character.imgSrc}"><br>
                         <p class="charactername">${character.Name}</p><br>
-                        <p class="characterstatus">${character.Status}</p>
+                        <p class="characterstatus">Title: ${character.Status}</p>
                         <p class="characterability">${character.Ability}</p>`;
 
 
@@ -40,7 +40,9 @@ characters.forEach(character => {
             characterButton.classList.add('active');
             document.querySelector('#close').classList.remove('hide');
             document.querySelector('.character-description').classList.remove('hide');
-            document.querySelector('.character-description').innerHTML=`${character.description}`;
+            document.querySelector('.character-description').innerHTML=`<img class="theimage" src="${character.imgSrc}"><br><br>
+                                                                        <p>The History of ${character.Name}</p><br><br>
+                                                                        <p class="theDescription">${character.description}</p>`;
 
         }
 

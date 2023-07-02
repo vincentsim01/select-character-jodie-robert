@@ -5,6 +5,14 @@ body{
     width: 100%;
 }
 
+#chooseyourmaster{
+    text-align:center;
+    font-face:Merriweather;
+    font-size:100px;
+    font-color:black;
+    font-weight:200px;
+}
+
 #container{
     background-color: crimson;
     width:100%;
@@ -28,12 +36,15 @@ body{
     background:gray;
     margin:15px;
     text-align:center;
+    cursor:pointer;
+    border-radius:20px;
 
     
 
 
     .characterimage{
         width:250px;
+        border-radius:15px;
         
 
     }
@@ -63,7 +74,16 @@ body{
     height:800px;
     width:70%;
     z-index: 13;
+    text-align: center;
+    padding:25px;
 
+    border-radius:10px;
+    animation:fromRight 1000ms linear;
+
+}
+
+.theimage{
+    width:500px;
 }
 
 
@@ -75,8 +95,13 @@ body{
     font-size: 50px;
     z-index:18;
     position:absolute;
-    top:50px;
-    left:50px;
+    top:150px;
+    left:150px;
+    background-color: #bbb;
+    border-radius: 50%;
+    width:50px;
+    text-align:center;
+    cursor:pointer;
 
 
 }
@@ -98,3 +123,12 @@ body{
 
     }
 }
+
+@keyframes fromRight {
+    0% {
+      transform: translateX(500px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
