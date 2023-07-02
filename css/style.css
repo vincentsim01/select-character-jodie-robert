@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
+
+body{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#container{
+    background-color: crimson;
+    width:100%;
+}
+
+#character-list{
+    background-color: aqua;
+    display:inline-block;
+    width:100%;
+    z-index: -13;
+    text-align: center;
+
+
+
+
+}
+
+
+
+.character{
+    background:gray;
+    margin:15px;
+    text-align:center;
+
+    
+
+
+    .characterimage{
+        width:250px;
+        
+
+    }
+
+    &.active{
+        animation:flash 300ms linear;
+
+
+
+
+    }
+}
+
+/* #container2{
+    width:200px;
+    height:200px;
+    background-color: chartreuse;
+    display:inline-block;
+} */
+
+.character-description{
+    border: 3px black solid;
+    background-color: darkorange;
+    display:inline-block;
+    position:absolute;
+    right:0px;
+    height:800px;
+    width:70%;
+    z-index: 13;
+
+}
+
+
+.hide{
+    display:none;
+}
+
+#close{
+    font-size: 50px;
+    z-index:18;
+    position:absolute;
+    top:50px;
+    left:50px;
+
+
+}
+
+@keyframes flash{
+    20%{
+        filter:brightness(200%);
+    }40%{
+        filter:brightness(150%);
+
+    }60%{
+        filter:brightness(200%);
+
+    }80%{
+        filter:brightness(150%);
+
+    }100%{
+        filter:brightness(200%);
+
+    }
+}
