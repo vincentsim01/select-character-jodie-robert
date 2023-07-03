@@ -1,13 +1,14 @@
 var charlist=document.getElementsByClassName("character-list");
 
 var characters = [
-    {Name:"Jodie",
-    id:"001",
-    Status: "Master",
-    Ability:"Master of Persuasion and Closing The Deal",
-    description:"Jodie can take money out of someone's pocket",
-    imgSrc:"image/jodie.jpeg"
-    },{
+    // {Name:"Jodie",
+    // id:"001",
+    // Status: "Master",
+    // Ability:"Master of Persuasion and Closing The Deal",
+    // description:"Jodie can take money out of someone's pocket",
+    // imgSrc:"image/jodie.jpeg"
+    // },
+    {
     Name:"Robert",
     id:"002",
     Status: "Master",
