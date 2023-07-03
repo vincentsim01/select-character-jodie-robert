@@ -4,15 +4,15 @@ var characters = [
     {Name:"Jodie",
     id:"001",
     Status: "Master",
-    Ability:"Master of Persuasion and Manipulation",
-    description:"Jodie is a...",
+    Ability:"Master of Persuasion and Closing The Deal",
+    description:"Jodie can take money out of someone's pocket",
     imgSrc:"image/jodie.jpeg"
     },{
     Name:"Robert",
     id:"002",
     Status: "Master",
-    Ability:"Master of Knowledge and Wisdom",
-    description:"Robert is a...",
+    Ability:"Master of Knowledge and Business Acumen",
+    description:"Happy Birthday Master Robert and also Congraduations on your MBA",
     imgSrc:"image/robert.jpeg"
     }
 ];
@@ -26,8 +26,7 @@ characters.forEach(character => {
     characterButton.ability=character.Ability;
     characterButton.description=character.description;
     characterButton.innerHTML=`<img class="characterimage" src="${character.imgSrc}"><br>
-                        <p class="charactername">${character.Name}</p><br>
-                        <p class="characterstatus">Title: ${character.Status}</p>
+                        <p class="charactername"> ${character.Status} ${character.Name}</p><br>
                         <p class="characterability">${character.Ability}</p>`;
 
 
@@ -36,13 +35,17 @@ characters.forEach(character => {
         characterButton.onclick=function(){
             if(document.querySelector('.character.active')){
                 document.querySelector('.character.active').classList.remove('active');
+
+                // <p class="theDescription">${character.description}</p>
             }
             characterButton.classList.add('active');
             document.querySelector('#close').classList.remove('hide');
             document.querySelector('.character-description').classList.remove('hide');
             document.querySelector('.character-description').innerHTML=`<img class="theimage" src="${character.imgSrc}"><br><br>
-                                                                        <p>The History of ${character.Name}</p><br><br>
-                                                                        <p class="theDescription">${character.description}</p>`;
+                                                                        <p class="thehistory">${character.description}</p><br><br>
+                                                                        `;
+
+
 
         }
 
