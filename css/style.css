@@ -60,7 +60,7 @@ body{
     }
 
     &.active{
-        animation:flash 500ms linear;
+        
     }
 }
 
